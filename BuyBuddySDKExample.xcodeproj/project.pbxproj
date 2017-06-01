@@ -12,9 +12,29 @@
 		4904F2431EDEB61100BC5ECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4904F2411EDEB61100BC5ECD /* Main.storyboard */; };
 		4904F2451EDEB61100BC5ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4904F2441EDEB61100BC5ECD /* Assets.xcassets */; };
 		4904F2481EDEB61100BC5ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4904F2461EDEB61100BC5ECD /* LaunchScreen.storyboard */; };
+		4904F2501EDEBE8700BC5ECD /* BuyBuddyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4904F24F1EDEBE8700BC5ECD /* BuyBuddyKit.framework */; };
+		4904F2511EDEBE9000BC5ECD /* BuyBuddyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4904F24F1EDEBE8700BC5ECD /* BuyBuddyKit.framework */; };
+		4904F2521EDEBE9000BC5ECD /* BuyBuddyKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4904F24F1EDEBE8700BC5ECD /* BuyBuddyKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49717D321EDEDA7400E062A6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49717D311EDEDA7400E062A6 /* PaymentViewController.swift */; };
+		7C3F024E4D20B00A60907D30 /* Pods_BuyBuddySDKExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459249BDA272D642CC1257B4 /* Pods_BuyBuddySDKExample.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4904F2531EDEBE9000BC5ECD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4904F2521EDEBE9000BC5ECD /* BuyBuddyKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		459249BDA272D642CC1257B4 /* Pods_BuyBuddySDKExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuyBuddySDKExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4904F23A1EDEB61100BC5ECD /* BuyBuddySDKExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyBuddySDKExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4904F23D1EDEB61100BC5ECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4904F23F1EDEB61100BC5ECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +42,10 @@
 		4904F2441EDEB61100BC5ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4904F2471EDEB61100BC5ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4904F2491EDEB61100BC5ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4904F24F1EDEBE8700BC5ECD /* BuyBuddyKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuyBuddyKit.framework; sourceTree = "<group>"; };
+		49717D311EDEDA7400E062A6 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		A2035AFA70F7549DF01D302B /* Pods-BuyBuddySDKExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyBuddySDKExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuyBuddySDKExample/Pods-BuyBuddySDKExample.debug.xcconfig"; sourceTree = "<group>"; };
+		FFB675182537DD4C50CFF0D5 /* Pods-BuyBuddySDKExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuyBuddySDKExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuyBuddySDKExample/Pods-BuyBuddySDKExample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4904F2511EDEBE9000BC5ECD /* BuyBuddyKit.framework in Frameworks */,
+				7C3F024E4D20B00A60907D30 /* Pods_BuyBuddySDKExample.framework in Frameworks */,
+				4904F2501EDEBE8700BC5ECD /* BuyBuddyKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +65,11 @@
 		4904F2311EDEB61100BC5ECD = {
 			isa = PBXGroup;
 			children = (
+				4904F24F1EDEBE8700BC5ECD /* BuyBuddyKit.framework */,
 				4904F23C1EDEB61100BC5ECD /* BuyBuddySDKExample */,
 				4904F23B1EDEB61100BC5ECD /* Products */,
+				D159501B687E2B46A16F0F3B /* Pods */,
+				C4F65F14F60C78C1ED54CD86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +90,26 @@
 				4904F2441EDEB61100BC5ECD /* Assets.xcassets */,
 				4904F2461EDEB61100BC5ECD /* LaunchScreen.storyboard */,
 				4904F2491EDEB61100BC5ECD /* Info.plist */,
+				49717D311EDEDA7400E062A6 /* PaymentViewController.swift */,
 			);
 			path = BuyBuddySDKExample;
+			sourceTree = "<group>";
+		};
+		C4F65F14F60C78C1ED54CD86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				459249BDA272D642CC1257B4 /* Pods_BuyBuddySDKExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D159501B687E2B46A16F0F3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2035AFA70F7549DF01D302B /* Pods-BuyBuddySDKExample.debug.xcconfig */,
+				FFB675182537DD4C50CFF0D5 /* Pods-BuyBuddySDKExample.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +119,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4904F24C1EDEB61100BC5ECD /* Build configuration list for PBXNativeTarget "BuyBuddySDKExample" */;
 			buildPhases = (
+				8058966CFE6EAFB32E6D486F /* [CP] Check Pods Manifest.lock */,
 				4904F2361EDEB61100BC5ECD /* Sources */,
 				4904F2371EDEB61100BC5ECD /* Frameworks */,
 				4904F2381EDEB61100BC5ECD /* Resources */,
+				B88C554F121460B7A972469D /* [CP] Embed Pods Frameworks */,
+				6F94CFB5F522523A01ACE544 /* [CP] Copy Pods Resources */,
+				4904F2531EDEBE9000BC5ECD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,7 +148,13 @@
 				TargetAttributes = {
 					4904F2391EDEB61100BC5ECD = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 4UGTE59LML;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -131,12 +189,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F94CFB5F522523A01ACE544 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuyBuddySDKExample/Pods-BuyBuddySDKExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8058966CFE6EAFB32E6D486F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B88C554F121460B7A972469D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuyBuddySDKExample/Pods-BuyBuddySDKExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4904F2361EDEB61100BC5ECD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4904F2401EDEB61100BC5ECD /* ViewController.swift in Sources */,
+				49717D321EDEDA7400E062A6 /* PaymentViewController.swift in Sources */,
 				4904F23E1EDEB61100BC5ECD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,8 +365,14 @@
 		};
 		4904F24D1EDEB61100BC5ECD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2035AFA70F7549DF01D302B /* Pods-BuyBuddySDKExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4UGTE59LML;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BuyBuddySDKExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaya.BuyBuddySDKExample;
@@ -270,8 +383,14 @@
 		};
 		4904F24E1EDEB61100BC5ECD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFB675182537DD4C50CFF0D5 /* Pods-BuyBuddySDKExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4UGTE59LML;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BuyBuddySDKExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaya.BuyBuddySDKExample;
@@ -299,6 +418,7 @@
 				4904F24E1EDEB61100BC5ECD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

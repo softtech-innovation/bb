@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BuyBuddySDKExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6Y-aR-Cch" customClass="BuyBuddyCartButton" customModule="BuyBuddyKit">
+                                <rect key="frame" x="215" y="517" width="94" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="1MO-GY-8x7"/>
+                                    <constraint firstAttribute="height" constant="100" id="uq8-Vy-vrs"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="t6Y-aR-Cch" secondAttribute="trailing" constant="50" id="l0e-tr-bs5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t6Y-aR-Cch" secondAttribute="bottom" constant="50" id="qkJ-z5-19e"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cartButton" destination="t6Y-aR-Cch" id="BPb-Nj-bHF"/>
+                        <segue destination="XaZ-Jv-oYB" kind="show" identifier="mySegue" id="J8G-T7-ziU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="34.632683658170919"/>
+        </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="6Gn-Uw-uDw">
+            <objects>
+                <viewController id="XaZ-Jv-oYB" customClass="PaymentViewController" customModule="BuyBuddySDKExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cbc-q0-egz"/>
+                        <viewControllerLayoutGuide type="bottom" id="J9z-1r-IhP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8aU-IV-WSO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkL-km-lYe">
+                                <rect key="frame" x="16" y="318" width="343" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="aPd-1N-Q25"/>
+                                    <constraint firstAttribute="height" constant="115" id="nRf-Ss-QQS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Öde">
+                                    <color key="titleShadowColor" red="0.35026164189999998" green="1" blue="0.30471499959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="payPressed:" destination="XaZ-Jv-oYB" eventType="touchUpInside" id="bLF-eG-FeD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nkL-km-lYe" firstAttribute="top" secondItem="Cbc-q0-egz" secondAttribute="bottom" constant="298" id="0RP-Hk-BAg"/>
+                            <constraint firstItem="nkL-km-lYe" firstAttribute="leading" secondItem="8aU-IV-WSO" secondAttribute="leadingMargin" id="1JG-X2-TPg"/>
+                            <constraint firstItem="nkL-km-lYe" firstAttribute="trailing" secondItem="8aU-IV-WSO" secondAttribute="trailingMargin" id="6IS-N1-JKu"/>
+                            <constraint firstItem="J9z-1r-IhP" firstAttribute="top" secondItem="nkL-km-lYe" secondAttribute="bottom" constant="234" id="ulP-Qd-a7M"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ur5-xJ-BrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.5999999999999" y="34.632683658170919"/>
         </scene>
     </scenes>
 </document>
