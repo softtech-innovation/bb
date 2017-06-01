@@ -42,6 +42,7 @@ class ViewController: RSCodeReaderViewController, BuyBuddyCartButtonDelegate, Bu
     
     func BuyBuddyOrderCreated(orderId: Int, basketTotal: Float) {
         self.orderId = orderId
+        print(orderId)
         self.basketTotal = basketTotal
         performSegue(withIdentifier: "mySegue", sender: self)
         
